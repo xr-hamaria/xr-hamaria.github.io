@@ -9,7 +9,7 @@ type Props = {
 export default function ContentItem(props: PropsWithChildren<Props>) {
   return (
     <Card
-      variant='elevation'
+      variant='outlined'
       sx={{
         padding: 2
       }}

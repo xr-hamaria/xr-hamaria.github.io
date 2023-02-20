@@ -12,11 +12,14 @@ import {
   TableCell,
   TableBody
 } from '@mui/material'
-import AdbIcon from '@mui/icons-material/Adb'
+import TwitterIcon from '@mui/icons-material/Twitter'
+import SchoolIcon from '@mui/icons-material/School'
 
 import ContentItem from './components/ContentItem'
 import Banner from './components/Banner'
 import WorkItem from './components/WorkItem'
+import CardLink from './components/CardLink'
+import EventItem from './components/EventItem'
 import { createTheme, ThemeProvider } from '@mui/material/styles'
 import { CssBaseline } from '@mui/material'
 
@@ -66,11 +69,11 @@ function App() {
         }}
       >
         <ContentItem title='About' subtitle='サークルについて'>
-        「静岡大学xRサークルはまりあ（旧：静岡大学xR同好会はまりあ）」は、xR（VR・AR・MRなどの総称）について、学内の認知度と技術力の向上を目指して活動するサークルです。ゲームエンジンやCGモデリングソフトの勉強会、VR体験会、バーチャル上でのイベントなどを開催しています。メンバーの多くが情報学部と工学部の学生ですが、主にオンラインで活動しており場所を選ばないため、教育学部や理学部など静岡キャンパスの学生も所属しています。
+          「静岡大学xRサークルはまりあ（旧：静岡大学xR同好会はまりあ）」は、xR（VR・AR・MRなどの総称）について、学内の認知度と技術力の向上を目指して活動するサークルです。ゲームエンジンやCGモデリングソフトの勉強会、VR体験会、バーチャル上でのイベントなどを開催しています。メンバーの多くが情報学部と工学部の学生ですが、主にオンラインで活動しており場所を選ばないため、教育学部や理学部など静岡キャンパスの学生も所属しています。
           <Table size='small' sx={{}}>
             <TableBody>
               <TableRow>
-                {rows.map((el) => (
+                {rows.map(el => (
                   <TableRow>
                     <TableCell variant='head'>{el.title}</TableCell>
                     <TableCell>{el.data}</TableCell>
@@ -84,7 +87,7 @@ function App() {
         <ContentItem title='Works' subtitle='過去の作品'>
           <Box
             sx={{
-              padding: {xs: 0, md: 2},
+              padding: { xs: 0, md: 2 },
               display: 'flex',
               flexDirection: 'column',
               gap: 2
@@ -95,10 +98,9 @@ function App() {
               title='黄昏の赤ずきん'
               link='https://game.creators-guild.com/gck2021/4786/'
             >
-              autem fugiat quasi quae!
-              repellat reprehenderit a hic quibusdam ducimus ipsum! Nostrum
-              dicta eveniet temporibus vitae eaque in illo! Expedita excepturi
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe
+              おばあさんからたくさんお菓子をもらってお家に帰ろうとしたらあたりはすっかり暗くなっていた。
+              お菓子の匂いにひきつけられお腹のすいたおばけたちがあなたに迫りくる。
+              生き延びるにはおばけにお菓子を投げ、夜明けを待つしかない。
             </WorkItem>
             <WorkItem
               img='https://xr-hamaria.github.io/virtual-inf/img/scshot.png'
@@ -106,29 +108,25 @@ function App() {
               title='バーチャル浜松キャンパス'
               reversed
             >
-            静岡大学浜松キャンパスをバーチャルで実現したもの、VRゴーグルがなくてもスマホやデスクトップ、タブレットからもアクセスできます！
-            </WorkItem>
-            <WorkItem
-              img='https://via.placeholder.com/300x200/00ff33'
-              title='[WIP]浜キャンの七不思議'
-            >
+              静岡大学浜松キャンパスをバーチャルで実現したもの、VRゴーグルがなくてもスマホやデスクトップ、タブレットからもアクセスできます！
             </WorkItem>
           </Box>
         </ContentItem>
-        <ContentItem title="Events" subtitle='開催したイベント'>
-          <ul>
-            <li>Unity勉強会</li>
-            <li>静大祭in浜松VR体験ブース</li>
-          </ul>
-
+        <ContentItem title='Events' subtitle='開催したイベント'>
+          <Box sx={{ display: 'flex', gap: 2, flexWrap: 'wrap'}}>
+            <EventItem title='静大祭in浜松VR体験ブース'>
+              VRを体験したことない方向けに、静大祭で体験ブースを開催した
+            </EventItem>
+            <EventItem title='Unity勉強会'>
+              VRゲーム開発のために、Unityというゲームエンジンの勉強会を開催する
+            </EventItem>
+          </Box>
         </ContentItem>
         <ContentItem title='Links' subtitle='リンク集'>
-          <ul>
-            <li>バーチャル浜キャン</li>
-            <li>大学</li>
-            <li>ツイッター</li>
-            <li>作ったゲーム</li>
-          </ul>
+          <Box sx={{display: 'flex', flexDirection: 'column', gap: 1}}>
+            <CardLink icon={<TwitterIcon />} title='公式ツイッター' link='https://twitter.com/xR_Hamamatsu' />
+            <CardLink icon={<SchoolIcon />} title='静岡大学' link="https://www.shizuoka.ac.jp" />
+          </Box>
         </ContentItem>
       </Box>
       <Box
@@ -142,7 +140,7 @@ function App() {
           justifyContent: 'center'
         }}
       >
-        © All Rights Reserved, 2020-2023
+        © All Rights Reserved, xR Association Hamaria, 2020-2023
       </Box>
     </ThemeProvider>
   )
