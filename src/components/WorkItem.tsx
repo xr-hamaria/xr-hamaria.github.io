@@ -33,7 +33,9 @@ export default function WorkItem(props: PropsWithChildren<Props>) {
           flexDirection: 'column'
         }}
       >
-        <Typography variant='h4' sx={{mb: 3}}>{props.title}</Typography>
+        <Typography variant='h5' sx={{ mb: 3 }}>
+          {props.title}
+        </Typography>
         <Typography variant='body1' sx={{ flexGrow: 1 }}>
           {props.children}
         </Typography>

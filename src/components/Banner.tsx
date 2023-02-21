@@ -1,12 +1,19 @@
 import { Box, Typography, Card } from '@mui/material'
 
+/**
+ * recruitingをtrueにすれば募集中テキストを表示できる
+ */
+
+const recruiting = false
+
 export default function Banner() {
   return (
     <Box
       sx={{
         width: 1,
         height: 300,
-        backgroundImage: `url(https://via.placeholder.com/800x300/003355)`,
+        backgroundImage: `url(/banner.png)`,
+        backgroundSize: 'cover',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
@@ -23,8 +30,8 @@ export default function Banner() {
           justifyContent: 'center'
         }}
       >
-        <Typography sx={{fontSize: {xs: 35, md: 50},whiteSpace: 'nowrap'}}>xRを経験してみませんか?</Typography>
-        <Typography sx={{fontSize: {xs: 25, md: 35}}}>部員募集中</Typography>
+        <Typography sx={{fontSize: {xs: 22, sm: 35, md: 50},whiteSpace: 'nowrap'}}>一緒にxRを経験してみませんか?</Typography>
+        {!recruiting || <Typography sx={{fontSize: {xs: 22, sm: 30, md: 35}}}>部員募集中！</Typography>}
       </Card>
     </Box>
   )

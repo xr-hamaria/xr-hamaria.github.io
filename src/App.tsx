@@ -113,19 +113,27 @@ function App() {
           </Box>
         </ContentItem>
         <ContentItem title='Events' subtitle='開催したイベント'>
-          <Box sx={{ display: 'flex', gap: 2, flexWrap: 'wrap'}}>
+          <Box sx={{ display: 'flex', gap: 2, flexWrap: 'wrap' }}>
             <EventItem title='静大祭in浜松VR体験ブース'>
-              VRを体験したことない方向けに、静大祭で体験ブースを開催した
+              VRを体験したことない方向けに、静大祭で体験ブースを開催しました。
             </EventItem>
             <EventItem title='Unity勉強会'>
-              VRゲーム開発のために、Unityというゲームエンジンの勉強会を開催する
+              VRゲーム開発のために、Unityというゲームエンジンの勉強会を開催します。
             </EventItem>
           </Box>
         </ContentItem>
         <ContentItem title='Links' subtitle='リンク集'>
-          <Box sx={{display: 'flex', flexDirection: 'column', gap: 1}}>
-            <CardLink icon={<TwitterIcon />} title='公式ツイッター' link='https://twitter.com/xR_Hamamatsu' />
-            <CardLink icon={<SchoolIcon />} title='静岡大学' link="https://www.shizuoka.ac.jp" />
+          <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
+            <CardLink
+              icon={<TwitterIcon />}
+              title='公式ツイッター'
+              link='https://twitter.com/xR_Hamamatsu'
+            />
+            <CardLink
+              icon={<SchoolIcon />}
+              title='静岡大学'
+              link='https://www.shizuoka.ac.jp'
+            />
           </Box>
         </ContentItem>
       </Box>
