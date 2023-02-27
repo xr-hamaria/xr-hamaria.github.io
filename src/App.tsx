@@ -33,8 +33,8 @@ const rows = [
   createData('人数', '約15人'),
   createData('部費', '0円'),
   createData('初期費用', '0円'),
-  createData('活動日', '2週に1回ディスコードで定例会'),
-  createData('活動場所', 'ディスコードまたは大学')
+  createData('活動日', '2週に1回Discordで定例会'),
+  createData('活動場所', 'Discordまたは大学')
 ]
 
 const darkTheme = createTheme({
@@ -83,6 +83,9 @@ function App() {
               <TableRow></TableRow>
             </TableBody>
           </Table>
+        </ContentItem>
+        <ContentItem title='Recruiting Information' subtitle='募集情報'>
+          
         </ContentItem>
         <ContentItem title='Works' subtitle='過去の作品'>
           <Box
