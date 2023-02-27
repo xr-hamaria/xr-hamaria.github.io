@@ -85,7 +85,9 @@ function App() {
           </Table>
         </ContentItem>
         <ContentItem title='Recruiting Information' subtitle='募集情報'>
-          
+        部員を募集しています！VRヘッドセットを所有するにも関わらず、xRに興味があれば大歓迎です！
+        <br />
+        加入しようとする方は以下のDiscordリンクをアクセスしてください！
         </ContentItem>
         <ContentItem title='Works' subtitle='過去の作品'>
           <Box
