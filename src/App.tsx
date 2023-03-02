@@ -127,7 +127,6 @@ function App() {
               VRゲーム開発のために、Unityというゲームエンジンの勉強会
             </EventItem>
             <EventItem title='Blender勉強会'>
-            <BlenderIcon></BlenderIcon>
               3Dモデリングの基本を一緒に勉強する勉強会
             </EventItem>
           </Box>
@@ -149,6 +148,7 @@ function App() {
       </Box>
       <Box
         sx={{
+          fontSize: {xs: 12, sm: 16},
           background: '#222',
           top: 'auto',
           bottom: 0,

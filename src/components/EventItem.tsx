@@ -6,7 +6,7 @@ type Props = {
 }
 
 export default function EventItem(props: PropsWithChildren<Props>) {
-  return <Box>
+  return <Box sx={{width:1}}>
     <Card variant='outlined' sx={{padding: 2, display: 'flex', flexDirection: 'column'}}>
       <Typography variant='h5' sx={{mb: 2}}>{props.title}</Typography>
       <Typography variant='body1'>{props.children}</Typography>
