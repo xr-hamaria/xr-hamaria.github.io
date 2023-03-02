@@ -1,12 +1,46 @@
 import { Box, Typography, Card, Button } from '@mui/material'
+import { useEffect, useState, useRef } from 'react'
 
 /**
  * recruitingをtrueにすれば募集中テキストを表示できる
  */
 
-const recruiting = true
+const recruiting = false
+
+const letters = 'あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやゆよらりるれろわをん'
 
 export default function Banner() {
+  let titleText = '一緒にxRを体験しませんか？'
+  const steps = 2
+
+  const [title, setTitle] = useState(titleText)
+
+  const [index, setIndex] = useState(0)
+
+  useEffect(() => {
+    let interval = setInterval(() => {
+      if (index < titleText.length * steps) {
+        setTitle(
+          titleText
+            .split('')
+            .map((letter, idx) =>
+              idx * steps > index
+                ? letters[Math.floor(Math.random() * letters.length)]
+                : letter
+            )
+            .join('')
+        )
+        setIndex(index => index + 1)
+      } else {
+        clearInterval(interval)
+      }
+    }, 50)
+
+    return () => {
+      clearInterval(interval)
+    }
+  }, [index])
+
   return (
     <Box
       sx={{
@@ -33,7 +67,7 @@ export default function Banner() {
         <Typography
           sx={{ fontSize: { xs: 22, sm: 35, md: 50 }, whiteSpace: 'nowrap' }}
         >
-          一緒にxRを体験してみませんか?
+          {title}
         </Typography>
         {!recruiting || (
           <Button

@@ -14,6 +14,7 @@ import {
 } from '@mui/material'
 import TwitterIcon from '@mui/icons-material/Twitter'
 import SchoolIcon from '@mui/icons-material/School'
+import BlenderIcon from '@mui/icons-material/Blender'
 
 import ContentItem from './components/ContentItem'
 import Banner from './components/Banner'
@@ -72,23 +73,23 @@ function App() {
           「静岡大学xRサークルはまりあ（旧：静岡大学xR同好会はまりあ）」は、xR（VR・AR・MRなどの総称）について、学内の認知度と技術力の向上を目指して活動するサークルです。ゲームエンジンやCGモデリングソフトの勉強会、VR体験会、バーチャル上でのイベントなどを開催しています。メンバーの多くが情報学部と工学部の学生ですが、主にオンラインで活動しており場所を選ばないため、教育学部や理学部など静岡キャンパスの学生も所属しています。
           <Table size='small' sx={{}}>
             <TableBody>
-              <TableRow>
-                {rows.map(el => (
-                  <TableRow>
-                    <TableCell variant='head'>{el.title}</TableCell>
-                    <TableCell>{el.data}</TableCell>
-                  </TableRow>
-                ))}
-              </TableRow>
+              {rows.map((el, i) => (
+                <TableRow key={i}>
+                  <TableCell variant='head'>{el.title}</TableCell>
+                  <TableCell>{el.data}</TableCell>
+                </TableRow>
+              ))}
               <TableRow></TableRow>
             </TableBody>
           </Table>
         </ContentItem>
-        <ContentItem title='Recruiting Information' subtitle='募集情報'>
-        部員を募集しています！VRヘッドセットを所有するにも関わらず、xRに興味があれば大歓迎です！
-        <br />
-        加入しようとする方は以下のDiscordリンクをアクセスしてください！
-        </ContentItem>
+        {true || (
+          <ContentItem title='Recruiting Information' subtitle='募集情報'>
+            部員を募集しています！VRヘッドセットを所有するにも関わらず、xRに興味があれば大歓迎です！
+            <br />
+            加入しようとする方は以下のDiscordリンクをアクセスしてください！
+          </ContentItem>
+        )}
         <ContentItem title='Works' subtitle='過去の作品'>
           <Box
             sx={{
@@ -120,10 +121,14 @@ function App() {
         <ContentItem title='Events' subtitle='開催したイベント'>
           <Box sx={{ display: 'flex', gap: 2, flexWrap: 'wrap' }}>
             <EventItem title='静大祭in浜松VR体験ブース'>
-              VRを体験したことない方向けに、静大祭で体験ブースを開催しました。
+              VRを体験したことない方向けに、静大祭で体験ブースとして開催しました
             </EventItem>
             <EventItem title='Unity勉強会'>
-              VRゲーム開発のために、Unityというゲームエンジンの勉強会を開催します。
+              VRゲーム開発のために、Unityというゲームエンジンの勉強会
+            </EventItem>
+            <EventItem title='Blender勉強会'>
+            <BlenderIcon></BlenderIcon>
+              3Dモデリングの基本を一緒に勉強する勉強会
             </EventItem>
           </Box>
         </ContentItem>
