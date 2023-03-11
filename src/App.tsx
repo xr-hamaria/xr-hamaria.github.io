@@ -1,5 +1,6 @@
 import {
   Box,
+  Button,
   Typography,
   Toolbar,
   IconButton,
@@ -44,6 +45,8 @@ const darkTheme = createTheme({
   }
 })
 
+const recruiting = false
+
 function App() {
   return (
     <ThemeProvider theme={darkTheme}>
@@ -69,6 +72,17 @@ function App() {
           margin: '0 auto'
         }}
       >
+        {!recruiting || (
+          <ContentItem title='Recruiting Information' subtitle='募集情報'>
+            部員を募集しています！VRヘッドセットを所有するにも関わらず、xRに興味があれば大歓迎です！
+            <br />
+            応募することは下のGoogle Formsのリンクにアクセスしてください！
+            <br />
+            <Box sx={{mt: 3, textAlign: 'center', justifySelf: 'center', alignSelf: 'center'}}>
+              <Button sx={{width: 1}} component='a' target="_blank" href='https://forms.gle/NXRod8K2h3WaQAze8' variant='contained'>応募する</Button>
+            </Box>
+          </ContentItem>
+        )}
         <ContentItem title='About' subtitle='サークルについて'>
           「静岡大学xRサークルはまりあ（旧：静岡大学xR同好会はまりあ）」は、xR（VR・AR・MRなどの総称）について、学内の認知度と技術力の向上を目指して活動するサークルです。ゲームエンジンやCGモデリングソフトの勉強会、VR体験会、バーチャル上でのイベントなどを開催しています。メンバーの多くが情報学部と工学部の学生ですが、主にオンラインで活動しており場所を選ばないため、教育学部や理学部など静岡キャンパスの学生も所属しています。
           <Table size='small' sx={{}}>
@@ -83,13 +97,6 @@ function App() {
             </TableBody>
           </Table>
         </ContentItem>
-        {true || (
-          <ContentItem title='Recruiting Information' subtitle='募集情報'>
-            部員を募集しています！VRヘッドセットを所有するにも関わらず、xRに興味があれば大歓迎です！
-            <br />
-            加入しようとする方は以下のDiscordリンクをアクセスしてください！
-          </ContentItem>
-        )}
         <ContentItem title='Works' subtitle='過去の作品'>
           <Box
             sx={{

@@ -11,6 +11,8 @@ export default function ContentItem(props: PropsWithChildren<Props>) {
     <Card
       variant='outlined'
       sx={{
+        display: 'flex',
+        flexDirection: 'column',
         padding: 2
       }}
     >
