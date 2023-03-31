@@ -45,7 +45,7 @@ const darkTheme = createTheme({
   }
 })
 
-const recruiting = false
+const recruiting = true
 
 function App() {
   return (
@@ -151,6 +151,15 @@ function App() {
               link='https://www.shizuoka.ac.jp'
             />
           </Box>
+        </ContentItem>
+        <ContentItem title='FAQs' subtitle='よくある質問'>
+          <Box component='h2' sx={{my: 0}}>VR機器を持っていなくても入部可能でしょうか？</Box>
+          <hr />
+          大丈夫です！VR機器を持っていなくてもxRに興味あれば大歓迎です！
+          <Box component='h2' sx={{my: 0}}>プログラミングできなくても大丈夫ですか？</Box>
+          <hr />
+          <Box component='h2' sx={{my: 0}}></Box>
+          <hr />
         </ContentItem>
       </Box>
       <Box
