@@ -152,7 +152,7 @@ function App() {
             />
           </Box>
         </ContentItem>
-        <ContentItem title='FAQs' subtitle='よくある質問'>
+        {true || <ContentItem title='FAQs' subtitle='よくある質問'>
           <Box component='h2' sx={{my: 0}}>VR機器を持っていなくても入部可能でしょうか？</Box>
           <hr />
           大丈夫です！VR機器を持っていなくてもxRに興味あれば大歓迎です！
@@ -160,7 +160,7 @@ function App() {
           <hr />
           <Box component='h2' sx={{my: 0}}></Box>
           <hr />
-        </ContentItem>
+        </ContentItem>}
       </Box>
       <Box
         sx={{
