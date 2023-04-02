@@ -74,9 +74,11 @@ function App() {
       >
         {!recruiting || (
           <ContentItem title="Recruiting Information" subtitle="募集情報">
-            部員を募集しています！VRヘッドセットを所有するにも関わらず、xRに興味があれば大歓迎です！
+            部員を募集しています。xRに興味あるなら大歓迎です！
             <br />
-            応募することは下のGoogle Formsのリンクにアクセスしてください！
+            学部2年以上の方、大学院の方もご気軽に応募してください！
+            <br />
+            以下のGoogle Formsのリンクから応募できます。応募したら、後日Discordサーバーへの招待リンクをお送りいたします。
             <br />
             <br />
             Discordの登録をもって仮入会扱いとなり、活動への参加が可能となります。正式な入会については後日ご案内いたします。
@@ -95,7 +97,7 @@ function App() {
                 href="https://forms.gle/NXRod8K2h3WaQAze8"
                 variant="contained"
               >
-                応募する
+                応募する(Google Forms)
               </Button>
             </Box>
           </ContentItem>
