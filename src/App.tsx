@@ -45,7 +45,7 @@ const darkTheme = createTheme({
   },
 });
 
-const recruiting = true;
+const recruiting = false;
 
 function App() {
   return (
