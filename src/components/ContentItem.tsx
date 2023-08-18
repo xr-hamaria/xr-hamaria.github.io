@@ -17,8 +17,7 @@ export default function ContentItem(props: PropsWithChildren<Props>) {
       }}
     >
       <Typography variant='h4'>{props.title}</Typography>
-      <Typography variant='body1'>{props.subtitle}</Typography>
-      <hr />
+      <Typography sx={{mb: 2}} variant='body1'>{props.subtitle}</Typography>
       <Box>{props.children}</Box>
     </Card>
   )

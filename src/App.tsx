@@ -3,19 +3,14 @@ import {
   Button,
   Typography,
   Toolbar,
-  IconButton,
   AppBar,
-  Card,
-  CardMedia,
   Table,
-  TableHead,
   TableRow,
   TableCell,
   TableBody,
 } from "@mui/material";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import SchoolIcon from "@mui/icons-material/School";
-import BlenderIcon from "@mui/icons-material/Blender";
 
 import ContentItem from "./components/ContentItem";
 import Banner from "./components/Banner";
@@ -72,7 +67,7 @@ function App() {
           margin: "0 auto",
         }}
       >
-        {!recruiting || (
+        {recruiting && (
           <ContentItem title="Recruiting Information" subtitle="募集情報">
             部員を募集しています。xRに興味あるなら大歓迎です！
             <br />
