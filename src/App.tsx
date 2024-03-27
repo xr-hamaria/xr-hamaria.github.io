@@ -40,7 +40,7 @@ const darkTheme = createTheme({
   },
 });
 
-const recruiting = false;
+const recruiting = true;
 
 function App() {
   return (
@@ -89,7 +89,7 @@ function App() {
                 sx={{ width: 1 }}
                 component="a"
                 target="_blank"
-                href="https://forms.gle/NXRod8K2h3WaQAze8"
+                href="https://forms.gle/Z3a6FxX3mewXawzC7"
                 variant="contained"
               >
                 応募する(Google Forms)
